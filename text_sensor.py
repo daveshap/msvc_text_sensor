@@ -26,6 +26,7 @@ def default():
         chan.basic_publish(exchange='sensor_text_chat', body=payload, routing_key='')
         chan.close()
         con.close()
+        return json.dump({'result': 'got it!'})
 
 
 if __name__ == "__main__":
